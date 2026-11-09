@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Page v2 - Thirawit Jarat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@500&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-title" href="index.html">My Page v2</a>
+      <nav>
+        <a href="#about">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ===== Profile: รูปกลม + ข้อมูล จัด layout ด้วย table ===== -->
+    <section class="block" id="profile">
+      <table class="profile-table">
+        <tr>
+          <td class="photo" rowspan="4">
+            <img class="profile-img" src="profile.jpg" alt="รูปโปรไฟล์ของ Thirawit Jarat">
+          </td>
+          <th scope="row">ชื่อ-นามสกุล</th>
+          <td class="profile-name">ถิรวิทย์ จารัตน์ (โช)</td>
+        </tr>
+        <tr>
+          <th scope="row">เป็น</th>
+          <td>นักศึกษา</td>
+        </tr>
+        <tr>
+          <th scope="row">สาขาวิชา</th>
+          <td>วิศวกรรมคอมพิวเตอร์และปัญญาประดิษฐ์</td>
+        </tr>
+        <tr>
+          <th scope="row">สถาบัน</th>
+          <td>สถาบันการจัดการปัญญาภิวัฒน์ (PIM)</td>
+        </tr>
+      </table>
+
+      <!-- ปุ่มไปหน้า contact.html -->
+      <a class="btn" href="contact.html">ติดต่อผม</a>
+    </section>
+
+    <!-- ===== About me ===== -->
+    <section class="block" id="about">
+      <h2>About me</h2>
+      <p>
+        สวัสดีครับ ผมชื่อโช ตอนนี้เรียนวิศวกรรมคอมพิวเตอร์และ AI อยู่ที่ PIM 
+        ช่วงนี้กำลังหัดทำเว็บด้วย HTML กับ CSS และเอางานที่ทำขึ้น GitHub Pages
+      </p>
+    </section>
+
+    <!-- ===== สิ่งที่ชอบทาน 3 อย่าง (ใช้ ol) ===== -->
+    <section class="block" id="food">
+      <h2>อาหารที่ชอบทาน</h2>
+      <ol class="food-list">
+        <li>ชาบู</li>
+        <li>หมูกระทะ</li>
+        <li>กระเพราไก่ ที่อร่อยๆ ไม่ใส่ถั่วฝักยาว</li>
+      </ol>
+    </section>
+
+    <!-- ===== Skills: table 4 column (skill, ระดับ, skill, ระดับ) ===== -->
+    <section class="block" id="skills">
+      <h2>Skills</h2>
+      <table class="skills">
+        <tr>
+          <td>HTML</td>
+          <td class="stars" title="3 จาก 5">★★☆☆☆</td>
+          <td>CSS</td>
+          <td class="stars" title="2 จาก 5">★☆☆☆☆</td>
+        </tr>
+        <tr>
+          <td>Git / GitHub</td>
+          <td class="stars" title="2 จาก 5">★★☆☆☆</td>
+          <td>English</td>
+          <td class="stars" title="3 จาก 5">★★★☆☆</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="block" id="experience">
+      <h2>Experience</h2>
+      <table class="exp">
+        <tr>
+          <th>Year</th>
+          <th>Work Place</th>
+        </tr>
+        <tr>
+          <td class="year">2026(March) - 2026(May)</td>
+          <td>7-Eleven (นักศึกษาทวิภาคี)</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer: link GitHub + contact.html ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      
+      <span>
+        <a href="https://github.com/Thirawit2111" target="_blank" rel="noopener">GitHub</a>
+        &nbsp;|&nbsp;
+        <a href="contact.html">Contact</a>
+        <a href="fansite-index.html">Fansite</a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>

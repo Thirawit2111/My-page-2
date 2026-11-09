@@ -1,0 +1,191 @@
+/* ========== สี ========== */
+:root {
+  --yellow: #ffe14d;
+  --pink: #ff5c93;
+  --sky: #7bdcf5;
+  --ink: #111111;
+  --paper: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+/* พื้นหลังเหลืองลายจุดแบบหนังสือการ์ตูน */
+body {
+  margin: 0;
+  font-family: "Mali", "Sarabun", Tahoma, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink);
+  background-color: var(--yellow);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 2px, transparent 2.5px);
+  background-size: 20px 20px;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+h1, h2 {
+  font-family: "Kanit", "Mali", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ========== ลิงก์ ========== */
+a:link { color: var(--ink); }
+a:visited { color: #5a2a82; }
+a:hover { background: var(--ink); color: var(--yellow); }
+a:focus-visible {
+  outline: 4px solid var(--pink);
+  outline-offset: 3px;
+}
+
+/* ========== แถบข้อความวิ่ง ========== */
+.ticker {
+  background: var(--ink);
+  color: var(--yellow);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.4rem 0;
+  font-weight: 600;
+}
+.ticker p {
+  display: inline-block;
+  margin: 0;
+  padding-left: 100%;
+  animation: slide 26s linear infinite;
+}
+@keyframes slide {
+  to { transform: translateX(-100%); }
+}
+
+/* ========== Hero ========== */
+.hero {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 11vw, 5.5rem);
+  text-shadow: 4px 4px 0 var(--paper), 7px 7px 0 var(--ink);
+}
+.sticker {
+  display: inline-block;
+  background: var(--pink);
+  border: 3px solid var(--ink);
+  padding: 0.15rem 1rem;
+  font-weight: 600;
+  transform: rotate(-5deg);
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.arms {
+  margin: 1rem 0 0.5rem;
+  font-size: clamp(1.4rem, 6vw, 2.4rem);
+  letter-spacing: 0.15rem;
+}
+.tagline {
+  display: inline-block;
+  margin: 0;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  padding: 0.3rem 1rem;
+  transform: rotate(1deg);
+}
+
+/* ========== การ์ด ========== */
+main { padding-bottom: 1rem; }
+
+.card {
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: 1.5rem 1.75rem 1.75rem;
+  margin: 0 0 2.25rem;
+}
+.tilt-left  { transform: rotate(-0.8deg); }
+.tilt-right { transform: rotate(0.8deg); }
+
+.card h2 {
+  display: inline-block;
+  font-size: 1.5rem;
+  background: var(--sky);
+  border: 3px solid var(--ink);
+  padding: 0.1rem 0.9rem;
+  margin: -2.4rem 0 1rem -0.5rem;
+  transform: rotate(-2deg);
+}
+
+/* ========== รายการข้อมูล (dl) ========== */
+.facts {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0;
+}
+.facts dt { font-weight: 600; }
+.facts dd { margin: 0; border-bottom: 2px dotted var(--ink); }
+
+/* ========== ลิสต์เหตุผล ========== */
+.reasons { margin: 0; padding-left: 1.6rem; }
+.reasons li { padding-left: 0.3rem; margin-bottom: 0.35rem; }
+.reasons li::marker { font-family: "Kanit", sans-serif; font-weight: 700; color: var(--pink); }
+
+/* ========== เครื่องวัด ========== */
+.meter { margin-bottom: 1rem; }
+.label { display: block; font-weight: 600; }
+.bar {
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  height: 2rem;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--pink);
+  border-right: 3px solid var(--ink);
+  font-style: normal;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 0.5rem;
+  line-height: 1.7rem;
+}
+.w99 { width: 99%; }
+.w80 { width: 80%; }
+.w35 { width: 35%; }
+
+/* ========== ปุ่ม ========== */
+.btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.5rem 1.4rem;
+  font-weight: 600;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  text-decoration: none;
+  transition: transform 0.1s;
+}
+.btn:hover { background: var(--pink); color: var(--ink); transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+.btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+
+/* ========== Footer ========== */
+footer { padding-top: 1rem; padding-bottom: 2.5rem; text-align: center; font-size: 0.95rem; }
+footer p { margin: 0; background: var(--paper); border: 3px solid var(--ink); padding: 0.6rem 1rem; display: inline-block; }
+
+/* ========== จอเล็ก ========== */
+@media (max-width: 600px) {
+  .card { padding: 1.25rem 1rem 1.5rem; box-shadow: 5px 5px 0 var(--ink); }
+  .card h2 { font-size: 1.25rem; }
+  .facts { grid-template-columns: 1fr; gap: 0; }
+  .facts dt { margin-top: 0.5rem; }
+}
+
+/* คนที่ปิดแอนิเมชันในเครื่อง จะไม่เห็นแถบวิ่ง */
+@media (prefers-reduced-motion: reduce) {
+  .ticker p { animation: none; padding-left: 1.25rem; }
+  .btn { transition: none; }
+}

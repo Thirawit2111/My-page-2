@@ -1,0 +1,260 @@
+/* ========== ตัวแปรสี ========== */
+:root {
+  --bg: #FFFFFF;
+  --paper: #ffffff;
+  --ink: #1f1f24;
+  --muted: #666670;
+  --accent: #7a1f2b;
+  --accent-dark: #6b1414;
+  --star: #c9a227;
+  --line: #d9d8d3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Sarabun", "Noto Sans Thai", Tahoma, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+  background-color: var(--bg);
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+h1, h2 {
+  font-family: "Mitr", "Sarabun", sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.35rem;
+  color: var(--accent);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ========== ลิงก์ (ข้อ 8: :link / :visited / :hover) ========== */
+a:link { color: var(--accent); }
+a:visited { color: #5b4a6e; }
+a:hover { color: var(--accent-dark); text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--star);
+  outline-offset: 2px;
+}
+
+/* ========== หัวเว็บ ========== */
+.site-header {
+  background: var(--paper);
+  border-top: 6px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+  padding: 0.8rem 0;
+}
+.site-header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.site-title {
+  font-family: "Mitr", sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.site-header nav a:link, .site-header nav a:visited {
+  color: var(--ink);
+  text-decoration: none;
+  margin-left: 1.25rem;
+}
+.site-header nav a:hover { color: var(--accent); text-decoration: underline; }
+
+/* ========== กระดาษแผ่นเดียว แบ่งส่วนด้วยเส้น ========== */
+main.wrap {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.block {
+  padding: 1.75rem 2rem;
+  border-bottom: 1px solid var(--line);
+}
+.block:last-child { border-bottom: 0; }
+
+/* ========== Profile: ส่วนเดียวที่ใช้สีเต็มแถบ ========== */
+#profile {
+  background: var(--accent);
+  color: #fff;
+  padding: 2.25rem 2rem;
+}
+
+.profile-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+.profile-table td,
+.profile-table th {
+  padding: 0.3rem 0;
+  vertical-align: top;
+  text-align: left;
+}
+.profile-table th {
+  width: 8.5rem;
+  font-weight: 400;
+  color: #e6c7cc;
+  padding-right: 1rem;
+}
+
+/* Challenge: ทำให้รูปกับข้อความห่างกัน
+   -> ใส่ padding-right ให้ cell ที่ครอบรูป
+   (อีกวิธี: border-spacing ที่ table หรือ margin-right ที่ img) */
+.profile-table td.photo {
+  width: 220px;
+  padding-right: 2.5rem;
+  vertical-align: middle;
+}
+
+.profile-img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;          /* ทำให้รูปเป็นวงกลม */
+  object-fit: cover;
+  border: 4px solid #fff;
+  background: var(--line);
+}
+
+.profile-name {
+  font-family: "Mitr", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+/* ========== ปุ่ม ========== */
+.btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.55rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.btn:link, a.btn:visited { color: #fff; }
+.btn:hover, a.btn:hover { background: var(--accent-dark); color: #fff; }
+.btn.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  padding: calc(0.55rem - 2px) calc(1.5rem - 2px);
+  margin-left: 0.5rem;
+}
+.btn.secondary:hover { background: var(--ink); color: #fff; }
+
+/* ปุ่มบนพื้นแดงใน profile ใช้สีกลับด้าน */
+#profile a.btn:link, #profile a.btn:visited { background: #fff; color: var(--accent); }
+#profile a.btn:hover { background: var(--bg); color: var(--accent-dark); }
+
+/* ========== รายการอาหาร ========== */
+.food-list { margin: 0; padding-left: 1.5rem; }
+.food-list li { padding-left: 0.25rem; }
+.food-list li::marker { color: var(--accent); font-weight: 700; }
+
+/* ========== ตาราง skill (4 column) ========== */
+.skills {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px dashed var(--accent-dark);
+}
+.skills td { padding: 0.5rem 0.9rem; }
+.skills td.stars {
+  color: var(--star);
+  letter-spacing: 0.12rem;
+  white-space: nowrap;
+}
+
+/* ========== ตาราง experience ========== */
+.exp {
+  width: 100%;
+  border-collapse: collapse;
+}
+.exp th, .exp td {
+  border: 1px solid var(--line);
+  padding: 0.5rem 0.9rem;
+  text-align: left;
+}
+.exp th {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+}
+.exp td.year { width: 11rem; white-space: nowrap; }
+.exp tr:nth-child(even) td { background: #f6f5f2; }
+
+/* ========== ฟอร์มติดต่อ ========== */
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 0.25rem;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+}
+.contact-form textarea { min-height: 9rem; resize: vertical; }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--accent); }
+.hint { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.5rem; }
+
+/* ========== Footer ========== */
+.site-footer {
+  background: #26262b;
+  color: #cfcfd6;
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.site-footer a:link, .site-footer a:visited { color: #fff; }
+
+/* ========== จอเล็ก (มือถือ) ========== */
+@media (max-width: 640px) {
+  .block, #profile { padding: 1.25rem 1rem; }
+  .profile-img { width: 110px; height: 110px; border-width: 3px; }
+  .profile-table td.photo { width: 130px; padding-right: 1rem; }
+  .profile-table th { width: 5.5rem; padding-right: 0.5rem; font-size: 0.95rem; }
+  .profile-table td, .profile-table th { font-size: 0.95rem; }
+  .profile-name { font-size: 1.3rem; }
+  .skills td { padding: 0.4rem 0.5rem; }
+  .exp td.year { width: auto; white-space: normal; }
+  .site-header nav a:link, .site-header nav a:visited { margin: 0 1rem 0 0; }
+}

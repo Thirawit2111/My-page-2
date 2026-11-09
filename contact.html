@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - My Page v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@500&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-title" href="index.html">My Page v2</a>
+      <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="block">
+      <h2>ติดต่อผม</h2>
+      <p class="hint">กรอกข้อมูลแล้วกดส่ง ระบบจะเปิดโปรแกรมอีเมลของคุณพร้อมข้อความที่กรอกไว้</p>
+
+      <!-- เปลี่ยน your-email@example.com เป็นอีเมลจริง -->
+      <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+
+        <label for="name">ชื่อ</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">อีเมล</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">เรื่องที่ติดต่อ</label>
+        <select id="topic" name="topic">
+          <option value="general">สอบถามทั่วไป</option>
+          <option value="work">เรื่องงาน</option>
+          <option value="project">ชวนทำโปรเจกต์</option>
+        </select>
+
+        <label for="message">ข้อความ</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button class="btn" type="submit">ส่งข้อความ</button>
+        <button class="btn secondary" type="reset">ล้างฟอร์ม</button>
+      </form>
+    </section>
+
+    <section class="block">
+      <h2>ช่องทางอื่น</h2>
+      <ul>
+        <li>GitHub: <a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a></li>
+        <li>อีเมล: your-email@example.com</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2026 Thirawit Jarat</span>
+      <span>
+        <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+        &nbsp;|&nbsp;
+        <a href="index.html">หน้าหลัก</a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>
